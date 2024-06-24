@@ -1,0 +1,19 @@
+{
+  "$schema": "https://swc.rs/schema.json",
+  "exclude": ["node_modules", "dist"],
+  "module": {
+    "type": "commonjs"
+  },
+  "jsc": {
+    "target": "es2022",
+    "baseUrl": "./src",
+    "paths": {
+      "@lery/*": ["./*"]
+    },
+    "parser": {
+      "syntax": "typescript",
+      "tsx": false,
+      "decorators": true
+    }
+  }
+}
