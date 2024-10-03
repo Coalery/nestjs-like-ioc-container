@@ -1,3 +1,4 @@
+import { Token } from '@lery/common/Token';
 import {
   PARAMETER_INJECT_METADATA,
   PROPERTY_INJECT_METADATA,
@@ -6,7 +7,7 @@ import {
 } from '@lery/core/metadata/InjectMetadata';
 
 export const Inject =
-  (token: string) =>
+  (token: Token) =>
   (
     target: object,
     propertyKey: string | symbol | undefined,
@@ -27,15 +28,3 @@ export const Inject =
       appendMetadata(PROPERTY_INJECT_METADATA, metadata, target.constructor);
     }
   };
-
-export const CalculatorToken = 'Calculator';
-export const InjectCalculator = () => Inject(CalculatorToken);
-
-export const LoggerToken = 'Logger';
-export const InjectLogger = () => Inject(LoggerToken);
-
-export const HelloWorldToken = 'HelloWorld';
-export const InjectHelloWorld = () => Inject(HelloWorldToken);
-
-export const FileManagerToken = 'FileManager';
-export const InjectFileManager = () => Inject(FileManagerToken);
