@@ -1,6 +1,6 @@
 {
   "name": "nestjs-like-ioc-container",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "Nestjs-like IoC Container",
   "main": "index.js",
   "scripts": {
